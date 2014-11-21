@@ -10,3 +10,7 @@ body {
 .jumbotron h2 {
   font-weight: 100;
 }
+.container-links li {
+  font-size: 150%;
+  font-weight: 100;
+}
