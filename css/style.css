@@ -17,3 +17,13 @@ body {
   font-size: 140%;
   font-weight: 100;
 }
+.gr_grid_book_container {
+  float: left;
+  width: 98px;
+  height: 160px;
+  padding: 0px 0px;
+  overflow: hidden;
+}
+.gr_grid_branding {
+  display: none;
+}
