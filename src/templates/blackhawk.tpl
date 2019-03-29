@@ -1,33 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alon Swartz</title>
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="../../css/style.css" type="text/css">
-  <link rel="shortcut icon" href="../../img/favicon.png">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-12889643-2', 'auto');
-  ga('send', 'pageview');
-</script>
-</head>
+% rebase('base.tpl', root='../..', title='Alon Swartz')
 
-<body>
-<div class="jumbotron">
-  <div class="container">
-    <a href="/"><img width="64" height="64" src="../../img/alonswartz.png" class="img-circle"/></a>
-    <h2>Alon Swartz</h2>
-    <p>Software engineer, open source evangelist and a bit of an IT security freak</p>
-  </div>
-</div>
-  
 <div class="container"> 
   <h1>Hand wired 54key full split mechanical keyboard</h1>
   <p style="margin: 20px 0px;">To cut a long story short, I started feeling
@@ -97,9 +69,4 @@
     <li>Geekhack and Deskthority communities</li>
   </ul>
 </div>
-
-
-</body>
-
-</html>
 
