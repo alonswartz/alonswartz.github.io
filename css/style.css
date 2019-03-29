@@ -4,8 +4,8 @@ body {
 .jumbotron {
   color: #fff;
   text-align: center;
-  height: 250px;
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(61, 176, 130)), to(rgb(121, 125, 182)));
+  height: 290px;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(71, 71, 71)), to(rgb(121, 125, 182)));
 }
 .jumbotron h2 {
   font-weight: 100;
