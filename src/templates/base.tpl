@@ -8,7 +8,7 @@
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ root }}/css/style.css" type="text/css">
-  <link rel="shortcut icon" href="{{ root }}/img/favicon.png">
+  <link rel="shortcut icon" href="{{ root }}/img/favicon.ico">
   % include('partials/ga.tpl')
 </head>
 
