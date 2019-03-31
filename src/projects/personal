@@ -1,0 +1,12 @@
+name: Blackhawk
+link: /keyboards/blackhawk
+desc: Hand wired 54key full split mechanical keyboard
+
+name: Trackpoint
+link: https://github.com/alonswartz/trackpoint
+desc: How to integrate a trackpoint in a mechanical keyboard
+
+name: Cube
+link: http://www.alonswartz.org/cube
+desc: Animated visual algorithms for speedcubing
+

@@ -1,0 +1,18 @@
+name: Bookshelf
+link: books/
+desc: Some of the books I've read and want to read
+
+name: GitHub
+link: https://github.com/alonswartz
+desc: I need to upload more stuff...
+
+name: LinkedIn
+link: https://www.linkedin.com/in/alonswartz
+desc: Don't use it much
+
+name: New release announcement (codename: Idan)
+link: http://www.turnkeylinux.org/announcing-idan
+
+name: Featured in the top 50 most powerful voices in open source
+link: http://www.mindtouch.com/blog/2010/03/17/mpv
+
