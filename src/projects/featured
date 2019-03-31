@@ -1,0 +1,20 @@
+name: TurnKey GNU/Linux
+link: https://www.turnkeylinux.org/
+desc: 100+ ready-to-use opensource solutions for VM's, bare-metal and the cloud
+
+name: TurnKey Hub
+link: https://hub.turnkeylinux.org/
+desc: deploy TurnKey in the cloud, with backup and migration ninja super powers
+
+name: TKLBAM
+link: https://www.turnkeylinux.org/tklbam
+desc: the easiest, most powerful secure server backups and migration solution
+
+name: TKLDev
+link: https://www.turnkeylinux.org/tkldev
+desc: the TurnKey development toolchain and build system
+
+name: BitKey
+link: https://bitkey.io
+desc: a self-contained Live CD/USB key for performing highly secure air-gapped Bitcoin transactions
+

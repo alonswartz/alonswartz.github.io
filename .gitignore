@@ -1,2 +1,3 @@
 *.pyc
 tmp/
+src/templates/projects/*.tpl

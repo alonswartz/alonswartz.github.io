@@ -3,11 +3,19 @@
 fatal() { echo "fatal: $@" 1>&2; exit 1; }
 
 R="src/render.py"
+PROJECTS_SRC="src/projects"
+PROJECTS_DST="src/templates/projects"
+
 [ -e $R ] || fatal "does not exist: $R"
 
 render() {
     name=$1
     if [ "$name" == "home" ]; then
+        for f in $(ls $PROJECTS_SRC/*); do
+            mkdir -p $PROJECTS_DST
+            echo "rendering $PROJECTS_DST/$(basename $f).tpl"
+            $R partial $f > $PROJECTS_DST/$(basename $f).tpl
+        done
         echo "rendering ./index.html"
         $R page $name > ./index.html
 
