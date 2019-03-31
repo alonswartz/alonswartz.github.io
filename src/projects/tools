@@ -1,0 +1,72 @@
+name: octohub
+link: https://github.com/turnkeylinux/octohub
+desc: Low level Python and CLI interface to GitHub
+
+name: aws-datacenters
+link: https://github.com/turnkeylinux/aws-datacenters
+desc: AWS Regional Data Centers mapping
+
+name: fab
+link: https://github.com/turnkeylinux/fab
+desc: Product fabrication framework
+
+name: tklpatch
+link: https://github.com/turnkeylinux/tklpatch
+desc: TurnKey Linux Customization Mechanism
+
+name: deck
+link: https://github.com/turnkeylinux/deck
+desc: Overlay-based virtual filesystem branching system
+
+name: di-live
+link: https://github.com/turnkeylinux/di-live
+desc: Debian Installer for Live systems
+
+name: buildtasks
+link: https://github.com/turnkeylinux/buildtasks
+desc: Convert an ISO to different build formats such as AMI, VMDK, etc.
+
+name: ec2metadata
+link: https://github.com/turnkeylinux/ec2metadata
+desc: Query and display EC2 metadata related to the AMI instance
+
+name: ebsmount
+link: https://github.com/turnkeylinux/ebsmount
+desc: Automatically mount EC2 EBS (Elastic Block Storage) devices
+
+name: repo
+link: https://github.com/turnkeylinux/repo
+desc: Tools to index and create a Debian package repository
+
+name: chanko
+link: https://github.com/turnkeylinux/chanko
+desc: Efficiently get packages from public sources
+
+name: confconsole
+link: https://github.com/turnkeylinux/confconsole
+desc: TurnKey Linux Configuration Console
+
+name: inithooks
+link: https://github.com/turnkeylinux/inithooks
+desc: Executes firstboot and everyboot scripts
+
+name: tklamq
+link: https://github.com/turnkeylinux/tklamq
+desc: TurnKey Linux Advanced Message Queue (AMQ) client
+
+name: hubtools
+link: https://github.com/turnkeylinux/hubtools
+desc: Python API bindings and CLI for the TurnKey Hub
+
+name: hubdns
+link: https://github.com/turnkeylinux/hubdns
+desc: TurnKey Hub Dynamic DNS client
+
+name: pycurl-wrapper
+link: https://github.com/turnkeylinux/pycurl-wrapper
+desc: Simplified wrapper for python-pycurl
+
+name: ccurl
+link: https://github.com/turnkeylinux/ccurl
+desc: Caching Curl
+

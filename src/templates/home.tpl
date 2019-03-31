@@ -7,6 +7,9 @@
   <h1>Some of my personal projects</h1>
   % include('projects/personal.tpl')
 
+  <h1>A few tools I made</h1>
+  % include('projects/tools.tpl')
+
   <h1>Other</h1>
   % include('projects/other.tpl')
 
