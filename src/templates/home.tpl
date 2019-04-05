@@ -14,9 +14,9 @@
   % include('projects/other.tpl')
 
   <h1>Contact</h1>
-  <ul class="list-unstyled">
-    <li>alon@alonswartz.org <a href="https://keybase.io/alonswartz">GPG key</a></li>
-    <li>+972-54-8114535</li>
-  </ul>
+  <div id="contact" class="project">
+    <h3>alon@alonswartz.org <a href="https://keybase.io/alonswartz">GPG KEY</a></h3>
+    <h3>+972-54-8114535</h3>
+  </div>
 </div>
 

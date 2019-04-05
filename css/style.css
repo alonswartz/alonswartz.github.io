@@ -1,22 +1,87 @@
 body {
-  font-family: "Open Sans", "FreightSansPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Arial" ,"serif";
 }
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+  font-weight: 700;
+  color: #202020;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  clear: both;
+}
+h1 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 85px;
+  padding-bottom: 30px;
+}
+h1:first-of-type {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+h2 {
+  font-size: 18px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+h3 {
+  font-size: 16px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+a {
+  color: #202020;
+  transition: all .3s ease-in-out;
+}
+a:hover {
+  color: #e41919;
+  text-decoration: none;
+}
+
 .jumbotron {
-  color: #fff;
   text-align: center;
   height: 290px;
   background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(71, 71, 71)), to(rgb(121, 125, 182)));
 }
 .jumbotron h2 {
+  font-size: 30px;
+  letter-spacing: 0px;
+  color: #fff;
   font-weight: 100;
+  text-transform: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-.container-links h1 {
-  font-size: 140%;
-}
-.container-links li {
-  font-size: 140%;
+.jumbotron h3 {
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: #fff;
   font-weight: 100;
+  text-transform: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
+
+.project {
+  padding-bottom: 32px;
+  text-align: center;
+}
+.project h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.project p {
+  min-height: 39px;
+}
+
+#contact h3 {
+  text-transform: none;
+}
+#contact a {
+  border-bottom: 1px dotted #999;
+}
+
 .gr_grid_book_container {
   float: left;
   width: 98px;
