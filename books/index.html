@@ -28,25 +28,1221 @@
   </div>
 </div>
   
+<style>
+ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+}
+.book, .book img, .book::after, .book::before {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.book::after, .book::before {
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: white;
+  border: 1px solid #d9d9d9;
+}
+.book::before {
+  left: -3px;
+}
+.book::after {
+  left: -6px;
+}
+.book:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25), 0 9px 20px 0 rgba(0, 0, 0, 0.45);
+}
+.book:hover img {
+  -webkit-transform: rotateY(-25deg);
+  transform: rotateY(-25deg);
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.book a {
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  height: 220px;
+  position: relative;
+  background: white;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: box-shadow .3s linear;
+}
+.book a img {
+  width: inherit;
+  height: inherit;
+  -webkit-transform-origin: 0 50%;
+  -webkit-transform: rotateY(0);
+  transform-origin: 0 50%;
+  transform: rotateY(0);
+  transition: all .45s ease;
+}
+#tlbl:hover {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  color: #e41919;
+}
+#toggle:checked ~ .row > .list-inline > .book {
+  opacity: 0.3;
+  background-color: #FFF;
+}
+#toggle:checked ~ .row > .list-inline > .rating-5 {
+  opacity: 1;
+  background-color: transparent;
+}
+</style>
+
 <div class="container">
-  <!-- read -->
-  <div id="gr_grid_widget_1416748781">
-  </div>
+  <input type="checkbox" id="toggle" class="hidden"/>
+  <center><label for="toggle" id="tlbl">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</label></center>
 
-  <!-- reading -->
-  <div id="gr_grid_widget_1416749458">
-  </div>
-
-  <!-- to-read -->
-  <div id="gr_grid_widget_1416749284">
-  </div>
+  <h3>Currently Reading</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-None">
+    <a href="https://www.amazon.com/gp/product/0990873854?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0990873854.01.LZ.jpg" title="Overcoming Gravity: A Systematic Approach to Gymnastics and Bodyweight Strength - Steven Low">
+    </a>
+  </li>
+  <li class="book rating-None">
+    <a href="https://www.amazon.com/gp/product/1627790365?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1627790365.01.LZ.jpg" title="Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian">
+    </a>
+  </li>
+  <li class="book rating-None">
+    <a href="https://www.amazon.com/gp/product/B00ULP6EW2?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B00ULP6EW2.01.LZ.jpg" title="Rationality: From AI to Zombies - Eliezer Yudkowsky">
+    </a>
+  </li>
+  <li class="book rating-None">
+    <a href="https://www.amazon.com/gp/product/1118968077?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1118968077.01.LZ.jpg" title="Value Proposition Design: How to Create Products and Services Customers Want - Alexander Osterwalder">
+    </a>
+  </li>
+</ul>
 </div>
 
-<script src="https://www.goodreads.com/review/grid_widget/34215899.Read?cover_size=medium&hide_link=&hide_title=&title=Read&num_books=200&order=d&shelf=read&sort=rating&widget_id=1416748781" type="text/javascript" charset="utf-8"></script>
 
-<script src="https://www.goodreads.com/review/grid_widget/34215899.Reading?cover_size=medium&hide_link=&hide_title=&title=Reading&num_books=200&order=d&shelf=currently-reading&sort=rating&widget_id=1416749458" type="text/javascript" charset="utf-8"></script>
 
-<script src="https://www.goodreads.com/review/grid_widget/34215899.To%20read?cover_size=medium&hide_link=&hide_title=&title=To%20Read&num_books=200&order=d&shelf=to-read&sort=rating&widget_id=1416749284" type="text/javascript" charset="utf-8"></script>
+  <h3>Read in 2019</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/2839906171?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/2839906171.01.LZ.jpg" title="Business Model Generation - Alexander Osterwalder">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0735698953?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0735698953.01.LZ.jpg" title="Agile Project Management with Kanban - Eric Brechner">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2018</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0071759514?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0071759514.01.LZ.jpg" title="All about Asset Allocation - Richard A. Ferri">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1328994961?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1328994961.01.LZ.jpg" title="Tribe of Mentors: Short Life Advice from the Best in the World - Timothy Ferriss">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0399564209?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0399564209.01.LZ.jpg" title="The Spark and the Grind: Ignite the Power of Disciplined Creativity - Erik Wahl">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/B01MF8SC2X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B01MF8SC2X.01.LZ.jpg" title="The Complete Guide to Fasting: Heal Your Body Through Intermittent, Alternate-Day, and Extended Fasting - Jason Fung">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1400064287?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1400064287.01.LZ.jpg" title="Made to Stick: Why Some Ideas Survive and Others Die - Chip Heath">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0062416049?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0062416049.01.LZ.jpg" title="Barking Up the Wrong Tree: The Surprising Science Behind Why Everything You Know About Success Is (Mostly) Wrong - Eric Barker">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591842808?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591842808.01.LZ.jpg" title="Start with Why: How Great Leaders Inspire Everyone to Take Action - Simon Sinek">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0865713596?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0865713596.01.LZ.jpg" title="The Mediator's Handbook - Jennifer E. Beer">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/B008NAKA5O?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B008NAKA5O.01.LZ.jpg" title="Essential Scrum: A Practical Guide to the Most Popular Agile Process - Kenneth S. Rubin">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/038534645X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/038534645X.01.LZ.jpg" title="Scrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2017</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1463533152?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1463533152.01.LZ.jpg" title="Swarmwise - Rick Falkvinge">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/B073CPP581?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B073CPP581.01.LZ.jpg" title="Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts - David    Gerard">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1400064287?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1400064287.01.LZ.jpg" title="Made to Stick: Why Some Ideas Survive and Others Die - Chip Heath">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0470375949?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0470375949.01.LZ.jpg" title="How a Second Grader Beats Wall Street: Golden Rules Any Investor Can Learn - Allan S. Roth">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/074327668X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/074327668X.01.LZ.jpg" title="Your Money and Your Brain - Jason Zweig">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/158648799X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/158648799X.01.LZ.jpg" title="The Great Depression: A Diary - Benjamin Roth">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/B01HSMRWNU?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B01HSMRWNU.01.LZ.jpg" title="Tools of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers - Timothy Ferriss">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0071385290?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0071385290.01.LZ.jpg" title="The Four Pillars of Investing - William J. Bernstein">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0471730335?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0471730335.01.LZ.jpg" title="The Bogleheads' Guide to Investing - Taylor Larimore">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0471392286?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0471392286.01.LZ.jpg" title="Common Sense on Mutual Funds: New Imperatives for the Intelligent Investor - John C. Bogle">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0671015206?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0671015206.01.LZ.jpg" title="The Millionaire Next Door: The Surprising Secrets of America's Wealthy - Thomas J. Stanley">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/B00JCC5JKI?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B00JCC5JKI.01.LZ.jpg" title="If You Can: How Millennials Can Get Rich Slowly - William J. Bernstein">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/031226321X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/031226321X.01.LZ.jpg" title="Fail-Safe Investing: Lifelong Financial Security in 30 Minutes - Harry Browne">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0393316041?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0393316041.01.LZ.jpg" title="Surely You're Joking, Mr. Feynman!: Adventures of a Curious Character - Richard Feynman">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/B00E640ZAG?tag=alonswartz-20">
+      <img src="https://www.hpmor.com/snap-cover-small.jpg" title="Harry Potter and the Methods of Rationality - Eliezer Yudkowsky">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2016</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0751565350?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0751565350.01.LZ.jpg" title="Harry Potter and the Cursed Child: Parts One and Two (Harry Potter, #8) - John Tiffany">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0545010225?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0545010225.01.LZ.jpg" title="Harry Potter and the Deathly Hallows (Harry Potter, #7) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0439785960?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0439785960.01.LZ.jpg" title="Harry Potter and the Half-Blood Prince (Harry Potter, #6) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/043935806X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/043935806X.01.LZ.jpg" title="Harry Potter and the Order of the Phoenix (Harry Potter, #5) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1551927063?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1551927063.01.LZ.jpg" title="Harry Potter and the Goblet of Fire (Harry Potter, #4) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/043965548X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/043965548X.01.LZ.jpg" title="Harry Potter and the Prisoner of Azkaban (Harry Potter, #3) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0439064864?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0439064864.01.LZ.jpg" title="Harry Potter and the Chamber of Secrets (Harry Potter, #2) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0439554934?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0439554934.01.LZ.jpg" title="Harry Potter and the Sorcerer's Stone (Harry Potter, #1) - J.K. Rowling">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1616080655?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1616080655.01.LZ.jpg" title="The Big Book of Endurance Training and Racing - Philip Maffetone">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1595581030?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1595581030.01.LZ.jpg" title="The New Jim Crow: Mass Incarceration in the Age of Colorblindness - Michelle Alexander">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0307594963?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307594963.01.LZ.jpg" title="Natural Born Heroes: How a Daring Band of Misfits Mastered the Lost Secrets of Strength and Endurance - Christopher McDougall">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0345453743?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0345453743.01.LZ.jpg" title="The Ultimate Hitchhiker's Guide to the Galaxy - Douglas Adams">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0743269519?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0743269519.01.LZ.jpg" title="The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change - Stephen R. Covey">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0307266303?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307266303.01.LZ.jpg" title="Born to Run: A Hidden Tribe, Superathletes, and the Greatest Race the World Has Never Seen - Christopher McDougall">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0446504122?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0446504122.01.LZ.jpg" title="NurtureShock: New Thinking About Children - Po Bronson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0767920562?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0767920562.01.LZ.jpg" title="The Culture Code: An Ingenious Way to Understand Why People Around the World Buy and Live as They Do - Clotaire Rapaille">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0061995037?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0061995037.01.LZ.jpg" title="The Upside of Irrationality: The Unexpected Benefits of Defying Logic at Work and at Home - Dan Ariely">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0316117048?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316117048.01.LZ.jpg" title="The Day the Universe Changed: How Galileo's Telescope Changed the Truth - James  Burke">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/357001049X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/357001049X.01.LZ.jpg" title="Last Lecture: Die Lehren meines Lebens - Randy Pausch">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0307352145?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307352145.01.LZ.jpg" title="Quiet: The Power of Introverts in a World That Can't Stop Talking - Susan Cain">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0393350649?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0393350649.01.LZ.jpg" title="The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies - Erik Brynjolfsson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0465059996?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0465059996.01.LZ.jpg" title="Rise of the Robots: Technology and the Threat of a Jobless Future - Martin Ford">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0300213557?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0300213557.01.LZ.jpg" title="Humans Need Not Apply: A Guide to Wealth and Work in the Age of Artificial Intelligence - Jerry Kaplan">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0393339750?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0393339750.01.LZ.jpg" title="The Shallows: What the Internet Is Doing to Our Brains - Nicholas Carr">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1594487715?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1594487715.01.LZ.jpg" title="Where Good Ideas Come from: The Natural History of Innovation - Steven Johnson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0385533063?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0385533063.01.LZ.jpg" title="The Most Human Human: What Talking with Computers Teaches Us About What It Means to Be Alive - Brian Christian">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/2839906171?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/2839906171.01.LZ.jpg" title="Business Model Generation - Alexander Osterwalder">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0060521996?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0060521996.01.LZ.jpg" title="The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business - Clayton M. Christensen">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1578518520?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1578518520.01.LZ.jpg" title="The Innovator's Solution: Creating and Sustaining Successful Growth - Clayton M. Christensen">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1400077303?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1400077303.01.LZ.jpg" title="Titan: The Life of John D. Rockefeller, Sr. - Ron Chernow">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0345350685?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0345350685.01.LZ.jpg" title="The Autobiography of Malcolm X - Malcolm X">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0393343448?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0393343448.01.LZ.jpg" title="Boomerang: Travels in the New Third World - Michael   Lewis">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0393351599?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0393351599.01.LZ.jpg" title="Flash Boys: A Wall Street Revolt - Michael   Lewis">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/039335315X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/039335315X.01.LZ.jpg" title="The Big Short: Inside the Doomsday Machine - Michael   Lewis">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2015</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0316056863?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316056863.01.LZ.jpg" title="Bossypants - Tina Fey">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/076537708X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/076537708X.01.LZ.jpg" title="The Dark Forest (Remembrance of Earth's Past, #2) - Liu Cixin">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1840187166?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1840187166.01.LZ.jpg" title="Catch Me If You Can: The True Story of a Real Fake - Frank W. Abagnale">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0765377063?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0765377063.01.LZ.jpg" title="The Three-Body Problem (Remembrance of Earth's Past #1) - Liu Cixin">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0316399620?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316399620.01.LZ.jpg" title="The First Fifteen Lives of Harry August - Claire North">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0307588688?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307588688.01.LZ.jpg" title="Kingpin: How One Hacker Took Over the Billion-Dollar Cybercrime Underground - Kevin Poulsen">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/076534825X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/076534825X.01.LZ.jpg" title="Spin (Spin, #1) - Robert Charles Wilson">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/030788743X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/030788743X.01.LZ.jpg" title="Ready Player One (Ready Player One, #1) - Ernest Cline">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/039548930X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/039548930X.01.LZ.jpg" title="The Lord of the Rings: The Return of the King (#3) - J.R.R. Tolkien">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0395489334?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0395489334.01.LZ.jpg" title="The Lord of the Rings: The Two Towers (#2) - J.R.R. Tolkien">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0395489318?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0395489318.01.LZ.jpg" title="The Lord of the Rings: The Fellowship of the Ring (#1) - J.R.R. Tolkien">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0312577222?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0312577222.01.LZ.jpg" title="The Nightingale - Kristin Hannah">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/097901977X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/097901977X.01.LZ.jpg" title="The Miracle Morning: The Not-So-Obvious Secret Guaranteed to Transform Your Life: Before 8AM - Hal Elrod">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0618260307?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0618260307.01.LZ.jpg" title="The Hobbit or There and Back Again - J.R.R. Tolkien">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0061122416?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0061122416.01.LZ.jpg" title="The Alchemist - Paulo Coelho">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0743264738?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0743264738.01.LZ.jpg" title="Einstein: His Life and Universe - Walter Isaacson">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0804139024?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0804139024.01.LZ.jpg" title="The Martian - Andy Weir">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0553212427?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0553212427.01.LZ.jpg" title="Sherlock Holmes: The Complete Novels and Stories, Volume II - Arthur Conan Doyle">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1430219483?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1430219483.01.LZ.jpg" title="Coders at Work: Reflections on the Craft of Programming - Peter Seibel">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/159420229X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/159420229X.01.LZ.jpg" title="Moonwalking with Einstein: The Art and Science of Remembering Everything - Joshua Foer">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0307720950?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307720950.01.LZ.jpg" title="Makers: The New Industrial Revolution - Chris Anderson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/147670869X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/147670869X.01.LZ.jpg" title="The Innovators: How a Group of  Hackers, Geniuses and Geeks Created the Digital Revolution - Walter Isaacson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0312263120?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0312263120.01.LZ.jpg" title="Digital Fortress - Dan Brown">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0385537859?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0385537859.01.LZ.jpg" title="Inferno (Robert Langdon, #4) - Dan Brown">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0671027387?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0671027387.01.LZ.jpg" title="Deception Point - Dan Brown">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0385504225?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0385504225.01.LZ.jpg" title="The Lost Symbol (Robert Langdon, #3) - Dan Brown">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1416524797?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1416524797.01.LZ.jpg" title="Angels & Demons (Robert Langdon, #1) - Dan Brown">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0385504209?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0385504209.01.LZ.jpg" title="The Da Vinci Code (Robert Langdon, #2) - Dan Brown">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0062301268?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0062301268.01.LZ.jpg" title="Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future - Ashlee Vance">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0743269519?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0743269519.01.LZ.jpg" title="The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change - Stephen R. Covey">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0596001088?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0596001088.01.LZ.jpg" title="The Cathedral & the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary - Eric S. Raymond">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0385347421?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0385347421.01.LZ.jpg" title="Becoming Steve Jobs: The Evolution of a Reckless Upstart into a Visionary Leader - Brent Schlender">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1400064163?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1400064163.01.LZ.jpg" title="Unbroken: A World War II Story of Survival, Resilience and Redemption - Laura Hillenbrand">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0393062139?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0393062139.01.LZ.jpg" title="A Mind of Its Own: How Your Brain Distorts and Deceives - Cordelia Fine">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1593083254?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1593083254.01.LZ.jpg" title="The Time Machine/The Invisible Man - H.G. Wells">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1476730628?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1476730628.01.LZ.jpg" title="The Promise of a Pencil: How an Ordinary Person Can Create Extraordinary Change - Adam Braun">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0679762884?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0679762884.01.LZ.jpg" title="High Output Management - Andrew S. Grove">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0060889578?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0060889578.01.LZ.jpg" title="SuperFreakonomics: Global Cooling, Patriotic Prostitutes And Why Suicide Bombers Should Buy Life Insurance - Steven D. Levitt">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/159420411X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/159420411X.01.LZ.jpg" title="The Signal and the Noise: Why So Many Predictions Fail - But Some Don't - Nate Silver">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591847788?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591847788.01.LZ.jpg" title="Hooked: How to Build Habit-Forming Products - Nir Eyal">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0765312794?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0765312794.01.LZ.jpg" title="Makers - Cory Doctorow">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0743269519?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0743269519.01.LZ.jpg" title="The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change - Stephen R. Covey">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1939529743?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1939529743.01.LZ.jpg" title="Virtual Freedom: How to Work with Virtual Staff to Buy More Time, Become More Productive, and Build Your Dream Business - Chris C. Ducker">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0316037702?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316037702.01.LZ.jpg" title="Ghost in the Wires: My Adventures as the World's Most Wanted Hacker - Kevin D. Mitnick">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0984999302?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0984999302.01.LZ.jpg" title="The Startup Owner's Manual: The Step-By-Step Guide for Building a Great Company - Steve Blank">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0062273205?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0062273205.01.LZ.jpg" title="The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers - Ben Horowitz">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/044654146X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/044654146X.01.LZ.jpg" title="Start-up Nation: The Story of Israel's Economic Miracle - Dan Senor">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0441569595?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0441569595.01.LZ.jpg" title="Neuromancer (Sprawl, #1) - William Gibson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1846144760?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1846144760.01.LZ.jpg" title="Our Mathematical Universe: My Quest for the Ultimate Nature of Reality - Max Tegmark">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0991677196?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0991677196.01.LZ.jpg" title="CyberStorm - Matthew Mather">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1680501275?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1680501275.01.LZ.jpg" title="Practical Vim: Edit Text at the Speed of Thought - Drew Neil">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2014</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0804139296?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0804139296.01.LZ.jpg" title="Zero to One: Notes on Startups, or How to Build the Future - Peter Thiel">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1495393437?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1495393437.01.LZ.jpg" title="Unbeatable Mind: Forge Resiliency and Mental Toughness to Succeed at an Elite Level - Mark Divine">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1594632960?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1594632960.01.LZ.jpg" title="How We Got to Now: Six Innovations That Made the Modern World - Steven Johnson">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0199291152?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0199291152.01.LZ.jpg" title="The Selfish Gene - Richard Dawkins">
+    </a>
+  </li>
+  <li class="book rating-3">
+    <a href="https://www.amazon.com/gp/product/0684853949?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0684853949.01.LZ.jpg" title="The Man Who Mistook His Wife for a Hat and Other Clinical Tales - Oliver Sacks">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/078670621X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/078670621X.01.LZ.jpg" title="Endurance: Shackleton's Incredible Voyage - Alfred Lansing">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0525953205?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0525953205.01.LZ.jpg" title="This Machine Kills Secrets: How WikiLeakers, Cypherpunks, and Hacktivists Aim to Free the World's Information - Andy Greenberg">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1934356964?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1934356964.01.LZ.jpg" title="tmux: Productive Mouse-Free Development - Brian P. Hogan">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/009192166X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/009192166X.01.LZ.jpg" title="How to Get Rich - Felix Dennis">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1416573151?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1416573151.01.LZ.jpg" title="How to Break a Terrorist: The U.S. Interrogators Who Used Brains, Not Brutality, to Take Down the Deadliest Man in Iraq - Matthew Alexander">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1583334386?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1583334386.01.LZ.jpg" title="The Willpower Instinct: How Self-Control Works, Why It Matters, and What You Can Do to Get More of It - Kelly McGonigal">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1328869334?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1328869334.01.LZ.jpg" title="1984 - George Orwell">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0060589469?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0060589469.01.LZ.jpg" title="Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values - Robert M. Pirsig">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1400069289?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1400069289.01.LZ.jpg" title="The Power of Habit: Why We Do What We Do in Life and Business - Charles Duhigg">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0553212419?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0553212419.01.LZ.jpg" title="Sherlock Holmes: The Complete Novels and Stories, Volume I - Arthur Conan Doyle">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1594488843?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1594488843.01.LZ.jpg" title="Drive: The Surprising Truth About What Motivates Us - Daniel H. Pink">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0316076201?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316076201.01.LZ.jpg" title="What the Dog Saw: And Other Adventures - Malcolm Gladwell">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1939293006?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1939293006.01.LZ.jpg" title="Cypherpunks: Freedom and the Future of the Internet - Julian Assange">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0060566108?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0060566108.01.LZ.jpg" title="Built to Last: Successful Habits of Visionary Companies - James C. Collins">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0066620996?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0066620996.01.LZ.jpg" title="Good to Great: Why Some Companies Make the Leap... and Others Don't - James C. Collins">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0062120999?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0062120999.01.LZ.jpg" title="Great by Choice: Uncertainty, Chaos, and Luck - Why Some Thrive Despite Them All - James C. Collins">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0743269519?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0743269519.01.LZ.jpg" title="The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change - Stephen R. Covey">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0316219266?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316219266.01.LZ.jpg" title="The Everything Store: Jeff Bezos and the Age of Amazon - Brad Stone">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0374275637?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0374275637.01.LZ.jpg" title="Thinking, Fast and Slow - Daniel Kahneman">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0307353133?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307353133.01.LZ.jpg" title="The 4-Hour Workweek - Timothy Ferriss">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1400064287?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1400064287.01.LZ.jpg" title="Made to Stick: Why Some Ideas Survive and Others Die - Chip Heath">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1451648537?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1451648537.01.LZ.jpg" title="Steve Jobs - Walter Isaacson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/081297381X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/081297381X.01.LZ.jpg" title="The Black Swan: The Impact of the Highly Improbable - Nassim Nicholas Taleb">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0061234001?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0061234001.01.LZ.jpg" title="Freakonomics: A Rogue Economist Explores the Hidden Side of Everything - Steven D. Levitt">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0140157352?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0140157352.01.LZ.jpg" title="Getting to Yes: Negotiating Agreement Without Giving In - Roger Fisher">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1401309666?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1401309666.01.LZ.jpg" title="The Long Tail: Why the Future of Business is Selling Less of More - Chris Anderson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591841380?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591841380.01.LZ.jpg" title="Wikinomics: How Mass Collaboration Changes Everything - Don Tapscott">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1401322905?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1401322905.01.LZ.jpg" title="Free: The Future of a Radical Price - Chris Anderson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1416596585?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1416596585.01.LZ.jpg" title="In the Plex: How Google Thinks, Works, and Shapes Our Lives - Steven Levy">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1598878735?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1598878735.01.LZ.jpg" title="The Talent Code: Unlocking the Secret of Skill in Sports, Art, Music, Math, and Just About Everything Else - Daniel Coyle">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591841666?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591841666.01.LZ.jpg" title="The Dip: A Little Book That Teaches You When to Quit (and When to Stick) - Seth Godin">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591843162?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591843162.01.LZ.jpg" title="Linchpin: Are You Indispensable? - Seth Godin">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/159184021X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/159184021X.01.LZ.jpg" title="Purple Cow: Transform Your Business by Being Remarkable - Seth Godin">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591842336?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591842336.01.LZ.jpg" title="Tribes: We Need You to Lead Us - Seth Godin">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0316346624?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316346624.01.LZ.jpg" title="The Tipping Point: How Little Things Can Make a Big Difference - Malcolm Gladwell">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0316017922?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316017922.01.LZ.jpg" title="Outliers: The Story of Success - Malcolm Gladwell">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0316204366?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316204366.01.LZ.jpg" title="David and Goliath: Underdogs, Misfits, and the Art of Battling Giants - Malcolm Gladwell">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0316010669?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0316010669.01.LZ.jpg" title="Blink: The Power of Thinking Without Thinking - Malcolm Gladwell">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1594481717?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1594481717.01.LZ.jpg" title="A Whole New Mind: Why Right-brainers Will Rule the Future - Daniel H. Pink">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0578012812?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0578012812.01.LZ.jpg" title="Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/162779073X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/162779073X.01.LZ.jpg" title="No Place to Hide: Edward Snowden, the NSA, and the U.S. Surveillance State - Glenn Greenwald">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0553380958?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0553380958.01.LZ.jpg" title="Snow Crash - Neal Stephenson">
+    </a>
+  </li>
+  <li class="book rating-3">
+    <a href="https://www.amazon.com/gp/product/0753453800?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0753453800.01.LZ.jpg" title="Treasure Island - Robert Louis Stevenson">
+    </a>
+  </li>
+  <li class="book rating-3">
+    <a href="https://www.amazon.com/gp/product/0141322438?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0141322438.01.LZ.jpg" title="Oliver Twist - Charles Dickens">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2008-2013 (incomplete)</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1439167346?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1439167346.01.LZ.jpg" title="How to Win Friends and Influence People - Dale Carnegie">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/006124189X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/006124189X.01.LZ.jpg" title="Influence: The Psychology of Persuasion - Robert B. Cialdini">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0307463745?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0307463745.01.LZ.jpg" title="Rework - Jason Fried">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0446692271?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0446692271.01.LZ.jpg" title="The Art of Profitability - Adrian J. Slywotzky">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1590597141?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1590597141.01.LZ.jpg" title="Founders at Work: Stories of Startups' Early Days - Jessica Livingston">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0596156715?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0596156715.01.LZ.jpg" title="The Art of Community: Building the New Age of Participation - Jono Bacon">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0201760312?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0201760312.01.LZ.jpg" title="An Introduction to Object-Oriented Programming - Timothy Budd">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2005-2008 (incomplete)</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1591840562?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1591840562.01.LZ.jpg" title="The Art of the Start: The Time-Tested, Battle-Hardened Guide for Anyone Starting Anything - Guy Kawasaki">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0201835959?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0201835959.01.LZ.jpg" title="The Mythical Man-Month: Essays on Software Engineering - Frederick P. Brooks Jr.">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0596006624?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0596006624.01.LZ.jpg" title="Hackers & Painters: Big Ideas from the Computer Age - Paul Graham">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0061353248?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0061353248.01.LZ.jpg" title="Predictably Irrational: The Hidden Forces That Shape Our Decisions - Dan Ariely">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0321344758?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0321344758.01.LZ.jpg" title="Don't Make Me Think: A Common Sense Approach to Web Usability - Steve Krug">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/061861916X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/061861916X.01.LZ.jpg" title="The Ancestor's Tale: A Pilgrimage to the Dawn of Evolution - Richard Dawkins">
+    </a>
+  </li>
+  <li class="book rating-3">
+    <a href="https://www.amazon.com/gp/product/0465069908?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0465069908.01.LZ.jpg" title="River Out of Eden: A Darwinian View of Life - Richard Dawkins">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0141026170?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0141026170.01.LZ.jpg" title="Climbing Mount Improbable - Richard Dawkins">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0618918248?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0618918248.01.LZ.jpg" title="The God Delusion - Richard Dawkins">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0615482155?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0615482155.01.LZ.jpg" title="Allen Carr's Easy Way To Stop Smoking - Allen Carr">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0142000280?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0142000280.01.LZ.jpg" title="Getting Things Done: The Art of Stress-Free Productivity - David Allen">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0679762884?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0679762884.01.LZ.jpg" title="High Output Management - Andrew S. Grove">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1413306535?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1413306535.01.LZ.jpg" title="How to Make Patent Drawings: A Patent It Yourself Companion - Jack Lo">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1413300251?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1413300251.01.LZ.jpg" title="Patent It Yourself - David Pressman">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0060521996?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0060521996.01.LZ.jpg" title="The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business - Clayton M. Christensen">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0691074372?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0691074372.01.LZ.jpg" title="Searching for a Corporate Savior: The Irrational Quest for Charismatic CEOs - Rakesh Khurana">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/089815913X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/089815913X.01.LZ.jpg" title="Cracking Creativity: The Secrets of Creative Genius - Michael Michalko">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+  <h3>Read in 2000-2004 (incomplete)</h3>
+<div class="row">
+<ul class='list-inline'>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/055380491X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/055380491X.01.LZ.jpg" title="Emotional Intelligence: Why It Can Matter More Than IQ - Daniel Goleman">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0764544683?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0764544683.01.LZ.jpg" title="The Shellcoder's Handbook: Discovering and Exploiting Security Holes - Jack Koziol">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0553383663?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0553383663.01.LZ.jpg" title="The Google Story: Inside the Hottest Business, Media, and Technology Success of Our Time - David A. Vise">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0195085140?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0195085140.01.LZ.jpg" title="None - Michio Kaku">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0471763179?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0471763179.01.LZ.jpg" title="The Power of Persuasion: How We're Bought and Sold - Robert V. Levine">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0470128720?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0470128720.01.LZ.jpg" title="Operating System Concepts - Abraham Silberschatz">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/076454280X?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/076454280X.01.LZ.jpg" title="The Art of Deception: Controlling the Human Element of Security - Kevin D. Mitnick">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1593270070?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1593270070.01.LZ.jpg" title="Hacking: The Art of Exploitation - Jon Erickson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0072193840?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0072193840.01.LZ.jpg" title="Hacker's Challenge : Test Your Incident Response Skills Using 20 Scenarios - Mike Schiffman">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/B007PMP862?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/B007PMP862.01.LZ.jpg" title="Hacking Exposed Windows 2000: Network Security Secrets and Solutions - Joel Scambray">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0131101633?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0131101633.01.LZ.jpg" title="The C Programming Language - Dennis M. Richie">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0072127732?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0072127732.01.LZ.jpg" title="Linux (Hacking Exposed) - Brian Hatch">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0072227427?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0072227427.01.LZ.jpg" title="Hacking Exposed: Network Security Secrets & Solutions - Stuart McClure">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/1599869772?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1599869772.01.LZ.jpg" title=" - Sun Tzu">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0446678643?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0446678643.01.LZ.jpg" title="Real Estate Riches: How to Become Rich Using Your Banker's Money - Dolf de Roos">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1937832023?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1937832023.01.LZ.jpg" title="Sales Dogs: You Don't Have to be an Attack Dog to Explode Your Income - Blair Singer">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0446677477?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0446677477.01.LZ.jpg" title="Rich Dad's Cashflow Quadrant: Rich Dad's Guide to Financial Freedom - Robert T. Kiyosaki">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/1612680178?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/1612680178.01.LZ.jpg" title="Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not! - Robert T. Kiyosaki">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0688014291?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0688014291.01.LZ.jpg" title="The One Minute Manager - Kenneth H. Blanchard">
+    </a>
+  </li>
+  <li class="book rating-5">
+    <a href="https://www.amazon.com/gp/product/0091883768?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0091883768.01.LZ.jpg" title="Who Moved My Cheese? - Spencer Johnson">
+    </a>
+  </li>
+  <li class="book rating-4">
+    <a href="https://www.amazon.com/gp/product/0782122205?tag=alonswartz-20">
+      <img src="https://images-eu.ssl-images-amazon.com/images/P/0782122205.01.LZ.jpg" title="MCSE: Networking Essentials Study Guide - James Chellis">
+    </a>
+  </li>
+</ul>
+</div>
+
+
+
+</div>
 
 
 </body>
