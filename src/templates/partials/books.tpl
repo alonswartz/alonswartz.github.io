@@ -1,7 +1,7 @@
 <div class="row">
 <ul class='list-inline'>
 % for b in books:
-  <li class="book">
+  <li class="book rating-{{!b.rating}}">
     <a href="https://www.amazon.com/gp/product/{{!b.isbn}}?tag=alonswartz-20">
     % if b.cover:
       <img src="{{!b.cover}}" title="{{!b.title}} - {{!b.author}}">

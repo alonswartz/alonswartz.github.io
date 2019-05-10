@@ -65,9 +65,25 @@ ul {
   transform: rotateY(0);
   transition: all .45s ease;
 }
+#tlbl:hover {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  color: #e41919;
+}
+#toggle:checked ~ .row > .list-inline > .book {
+  opacity: 0.3;
+  background-color: #FFF;
+}
+#toggle:checked ~ .row > .list-inline > .rating-5 {
+  opacity: 1;
+  background-color: transparent;
+}
 </style>
 
 <div class="container">
+  <input type="checkbox" id="toggle" class="hidden"/>
+  <center><label for="toggle" id="tlbl">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</label></center>
+
   <h3>Currently Reading</h3>
   % include('books/reading.tpl')
 
