@@ -28,9 +28,9 @@ class AttrDict(dict):
         self[name] = val
 
 
-class Projects:
+class Items:
     def __init__(self, inputfile):
-        self.projects = []
+        self.items = []
         self._parse(inputfile)
 
     def _parse(self, inputfile):
@@ -41,16 +41,16 @@ class Projects:
                 k, v = line.split(':', 1)
                 p[k.strip()] = v.strip()
             else:
-                self.projects.append(p)
+                self.items.append(p)
                 p = AttrDict()
         if p:
-            self.projects.append(p)
+            self.items.append(p)
 
 
 def render_partial(inputfile):
     type = os.path.basename(os.path.dirname(inputfile))
     if type == 'projects':
-        projects = Projects(inputfile).projects
+        projects = Items(inputfile).items
         return bottle.template('partials/projects', {'projects': projects})
 
 
