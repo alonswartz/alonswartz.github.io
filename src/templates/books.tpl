@@ -1,22 +1,46 @@
 % rebase('base.tpl', root='..', title='Alon Swartz')
 
+<style>
+ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+}
+.book img {
+  width: 200px;
+}
+</style>
+
 <div class="container">
-  <!-- read -->
-  <div id="gr_grid_widget_1416748781">
-  </div>
+  <h3>Currently Reading</h3>
+  % include('books/reading.tpl')
 
-  <!-- reading -->
-  <div id="gr_grid_widget_1416749458">
-  </div>
+  <h3>Read in 2019</h3>
+  % include('books/read_2019.tpl')
 
-  <!-- to-read -->
-  <div id="gr_grid_widget_1416749284">
-  </div>
+  <h3>Read in 2018</h3>
+  % include('books/read_2018.tpl')
+
+  <h3>Read in 2017</h3>
+  % include('books/read_2017.tpl')
+
+  <h3>Read in 2016</h3>
+  % include('books/read_2016.tpl')
+
+  <h3>Read in 2015</h3>
+  % include('books/read_2015.tpl')
+
+  <h3>Read in 2014</h3>
+  % include('books/read_2014.tpl')
+
 </div>
-
-<script src="https://www.goodreads.com/review/grid_widget/34215899.Read?cover_size=medium&hide_link=&hide_title=&title=Read&num_books=200&order=d&shelf=read&sort=rating&widget_id=1416748781" type="text/javascript" charset="utf-8"></script>
-
-<script src="https://www.goodreads.com/review/grid_widget/34215899.Reading?cover_size=medium&hide_link=&hide_title=&title=Reading&num_books=200&order=d&shelf=currently-reading&sort=rating&widget_id=1416749458" type="text/javascript" charset="utf-8"></script>
-
-<script src="https://www.goodreads.com/review/grid_widget/34215899.To%20read?cover_size=medium&hide_link=&hide_title=&title=To%20Read&num_books=200&order=d&shelf=to-read&sort=rating&widget_id=1416749284" type="text/javascript" charset="utf-8"></script>
 

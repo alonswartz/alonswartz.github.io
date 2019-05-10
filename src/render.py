@@ -53,6 +53,10 @@ def render_partial(inputfile):
         projects = Items(inputfile).items
         return bottle.template('partials/projects', {'projects': projects})
 
+    if type == 'books':
+        books = Items(inputfile).items
+        return bottle.template('partials/books', {'books': books})
+
 
 def render_page(name):
     return bottle.template(name, {'name': name})

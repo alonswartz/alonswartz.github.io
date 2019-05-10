@@ -3,6 +3,8 @@
 fatal() { echo "fatal: $@" 1>&2; exit 1; }
 
 R="src/render.py"
+BOOKS_SRC="src/books"
+BOOKS_DST="src/templates/books"
 PROJECTS_SRC="src/projects"
 PROJECTS_DST="src/templates/projects"
 
@@ -20,6 +22,11 @@ render() {
         $R page $name > ./index.html
 
     elif [ "$name" == "books" ]; then
+        for f in $(ls $BOOKS_SRC/*); do
+            mkdir -p $BOOKS_DST
+            echo "rendering $BOOKS_DST/$(basename $f).tpl"
+            $R partial $f > $BOOKS_DST/$(basename $f).tpl
+        done
         echo "rendering $name/index.html"
         $R page $name > $name/index.html
 
