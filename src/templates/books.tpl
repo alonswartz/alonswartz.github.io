@@ -89,5 +89,14 @@ ul {
   <h3>Read in 2014</h3>
   % include('books/read_2014.tpl')
 
+  <h3>Read in 2008-2013 (incomplete)</h3>
+  % include('books/read_2013.tpl')
+
+  <h3>Read in 2005-2008 (incomplete)</h3>
+  % include('books/read_2008.tpl')
+
+  <h3>Read in 2000-2004 (incomplete)</h3>
+  % include('books/read_2004.tpl')
+
 </div>
 
