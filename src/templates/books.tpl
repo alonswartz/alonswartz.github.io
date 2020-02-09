@@ -87,6 +87,9 @@ ul {
   <h3>Currently Reading</h3>
   % include('books/reading.tpl')
 
+  <h3>Read in 2020</h3>
+  % include('books/read_2020.tpl')
+
   <h3>Read in 2019</h3>
   % include('books/read_2019.tpl')
 
